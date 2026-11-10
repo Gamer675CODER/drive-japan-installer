@@ -11,12 +11,14 @@
   </style>
   <style>
     .release-archive{border-top:1px solid var(--line);padding:42px 0;margin-top:8px}.release-archive h2{font-size:30px;letter-spacing:-.04em;margin:0 0 6px}.release-archive>p{color:var(--muted)}.release-list{display:grid;gap:10px;margin-top:20px}.release-item{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 18px}.release-item small{display:block;color:var(--muted)}.release-item a{flex:none;color:var(--mint);font-weight:750}.release-error{color:var(--muted)}@media(max-width:600px){.release-item{align-items:flex-start;flex-direction:column;gap:5px}}
+  </style>  <style>
+    .packs{border-top:1px solid var(--line);padding:48px 0 64px}.packs-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}.packs-heading h2{font-size:clamp(28px,4vw,36px);letter-spacing:-.05em;margin:4px 0 0}.packs-heading>p{max-width:290px;color:var(--muted);font-size:14px}.packs-label,.pack-tier{color:var(--mint);font-size:11px;font-weight:850;letter-spacing:.13em}.pack-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.pack-card{display:flex;flex-direction:column;min-height:290px;padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#1d292b,#172023)}.pack-card h3{margin:18px 0 8px;font-size:23px;letter-spacing:-.04em}.pack-card p{margin:0;color:#d4ddda;font-size:14px}.pack-card small{margin-top:12px;color:var(--muted);font-size:12px}.pack-premium{border-color:#879159;background:linear-gradient(145deg,#2c3025,#1e2520)}.pack-link{align-self:flex-start;margin-top:auto;padding-top:20px;color:var(--mint);font-weight:850;text-decoration:none}.pack-link:hover{text-decoration:underline}@media(max-width:700px){.packs-heading{align-items:flex-start;flex-direction:column;gap:0}.pack-grid{grid-template-columns:1fr}.pack-card{min-height:250px}}
   </style></head>
 <body>
   <main class="wrap">
     <header class="top">
       <a class="brand" href="#top" aria-label="Drive Japan Installer home"><span class="mark" aria-hidden="true">D</span><span>DRIVE JAPAN <span style="color:var(--muted);font-weight:600">INSTALLER</span></span></a>
-      <nav aria-label="Main navigation"><a href="#features">The game</a><a href="#install">How to install</a><a href="#versions">Versions</a><a href="https://github.com/atmichetti/drive-japan-installer/releases" rel="noreferrer">Releases</a></nav>
+      <nav aria-label="Main navigation"><a href="#features">The game</a><a href="#packs">Packs</a><a href="#install">How to install</a><a href="#versions">Versions</a><a href="https://github.com/atmichetti/drive-japan-installer/releases" rel="noreferrer">Releases</a></nav>
     </header>
     <section class="hero" id="top">
       <div class="pill"><span class="dot" aria-hidden="true"></span> The latest Windows version</div>
@@ -31,7 +33,14 @@
       <article class="card"><span class="icon" aria-hidden="true">🌧</span><h2>Drive your way</h2><p>Free-roam through the city, switch between clear skies and rain, or try a driving mission.</p></article>
       <article class="card"><span class="icon" aria-hidden="true">🎮</span><h2>Keyboard or controller</h2><p>Play with keyboard and mouse or use a standard Xbox-style game controller.</p></article>
     </section>
-    <section class="release-archive" id="versions">
+        <section class="packs" id="packs" aria-labelledby="packs-title">
+      <div class="packs-heading"><div><span class="packs-label">THREE FREE PACKS</span><h2 id="packs-title">Choose your Drive Japan.</h2></div><p>Every pack is free. One game installer includes the full pack set.</p></div>
+      <div class="pack-grid">
+        <article class="pack-card"><span class="pack-tier">BRONZE · FREE</span><h3>Drive together.</h3><p>Online multiplayer rooms for up to four drivers, plus GPS navigation over real Tokyo streets.</p><small>Multiplayer needs a public server address.</small><a class="pack-link" href="https://github.com/Gamer675CODER/drive-japan-installer/releases/latest">Get free packs ↓</a></article>
+        <article class="pack-card"><span class="pack-tier">SILVER · FREE</span><h3>More ways to roam.</h3><p>Everything in Bronze, plus three extra cars and four separate save files.</p><small>Start a new adventure in any open save slot.</small><a class="pack-link" href="https://github.com/Gamer675CODER/drive-japan-installer/releases/latest">Get free packs ↓</a></article>
+        <article class="pack-card pack-premium"><span class="pack-tier">PREMIUM · FREE</span><h3>Make it shine.</h3><p>Everything in Silver, plus glossier paint and enhanced vehicle details.</p><small>All pack features come in one installer.</small><a class="pack-link" href="https://github.com/Gamer675CODER/drive-japan-installer/releases/latest">Get free packs ↓</a></article>
+      </div>
+    </section><section class="release-archive" id="versions">
       <h2>Every version, all in one place.</h2>
       <p>Choose an installer from any release. Older downloads stay available when a new update is published.</p>
       <div id="releaseList" role="list" aria-live="polite">Loading released versions…</div>
