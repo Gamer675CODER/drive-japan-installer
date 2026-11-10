@@ -65,7 +65,8 @@
         if (!installer) throw new Error("No Windows installer is attached to the latest release.");
         download.href = installer.browser_download_url;
         download.removeAttribute("aria-disabled");
-        version.textContent = `Version ${release.tag_name.replace(/^v/i, "")}`;
+        const appVersion = /^App version:\s*(v?\d+\.\d+\.\d+)/im.exec(release.body || "")?.[1];
+        version.textContent = appVersion ? Version ${appVersion} · release ${release.tag_name} : Version ${release.tag_name.replace(/^v/i, ")};
         fileInfo.textContent = `Windows installer · ${formatSize(installer.size)}`;
         status.textContent = "Download starts from GitHub.";
       })
